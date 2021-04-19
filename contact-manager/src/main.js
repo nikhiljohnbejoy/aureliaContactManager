@@ -10,6 +10,8 @@ export function configure(aurelia) {
 
   aurelia.use.developmentLogging(environment.debug ? 'debug' : 'warn');
 
+  aurelia.use.plugin(PLATFORM.moduleName('bcx-aurelia-reorderable-repeat'));
+  
   if (environment.testing) {
     aurelia.use.plugin(PLATFORM.moduleName('aurelia-testing'));
   }

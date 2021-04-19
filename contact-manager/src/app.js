@@ -12,7 +12,7 @@ import {inject, PLATFORM} from 'aurelia-framework';
       config.options.pushState = true;
       config.options.root = '/';
       config.map([
-        { route: '',              moduleId: PLATFORM.moduleName('no-selection'),   title: 'Select'},
+        { route: '',              moduleId: PLATFORM.moduleName('no-selection'),name:'default',   title: 'Select'},
         { route: 'contacts/:id',  moduleId: PLATFORM.moduleName('contact-detail'), name:'contacts' }
       ]);
   

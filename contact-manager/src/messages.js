@@ -9,6 +9,12 @@ export class ContactUpdated {
       this.contact = contact;
     }
   }
+  export class ContactDeleted{
+      constructor(contact){
+        this.contact = contact;
+      }
+  }
+  
   
 
   

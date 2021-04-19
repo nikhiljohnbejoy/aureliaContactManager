@@ -1,4 +1,4 @@
-let latency = 2000;
+let latency = 200;
 let id = 0;
 
 function getId(){
@@ -90,6 +90,22 @@ export class WebAPI {
 
         this.isRequesting = false;
         resolve(instance);
+      }, latency);
+    });
+  }
+  deleteContact(contact){
+    this.isRequesting = true;
+    return new Promise(resolve => {
+      setTimeout(() => {
+        let found = contacts.filter(x => x.id == contact.id)[0];
+
+        if(found){
+          let index = contacts.indexOf(found);
+          contacts.splice(index,1);
+        }
+
+        this.isRequesting = false;
+        resolve(true);
       }, latency);
     });
   }
