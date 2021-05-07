@@ -33,5 +33,5 @@ node_modules
 # Compiled files
 /scripts
 /src/environment.js
-/dist
+#/dist
 /test/coverage-jest
